@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      color: white;
+    }
+
+    main {
+      position: relative;
+      height: 100%;
+    }
+
+    div {
+      position: relative;
+      border: 3px solid #c3c3c3;
+      text-align: center;
+      margin: 0 auto;
+      height: 50%;
+      width: 80%;
+    }
+
+    #large {
+      margin: 0 auto;
+      width: 80%;
+      top: 49%;
+      /* height: 40%; */
+      background-color: blue;
+    }
+
+    #medium {
+      margin: 0 auto;
+      width: 80%;
+      /* height: 50%; */
+      background-color: red;
+      top: 42%;
+    }
+
+    #small {
+      margin: 0 auto;
+      top: 37%;
+      width: 80%;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div id="large">
+      This is a large rectangle.
+      <div id="medium">
+        This is a medium rectangle inside the large rectangle.
+        <div id="small">
+          This is a small rectangle inside the medium rectangle.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    document.querySelector("#small").addEventListener("click", function(){alert("The small inner rectangle has been clicked.")})
+
+    document.querySelector("#medium").addEventListener("click", function(){alert("The event for the medium inner rectangle has been triggered without being clicked because of bubbling.")})
+
+    document.querySelector("#large").addEventListener("click", function(){alert("The event for the large, outer rectangle has been triggered without being clicked because of bubbling.")})
+
+  </script>
+
+</body>
+</html>

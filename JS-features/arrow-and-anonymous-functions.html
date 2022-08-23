@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow and Anonymous Function Practice</title>
+</head>
+<body>
+
+  <div id="outer">
+    This is a div.
+    <p id="inner">
+      This is a sentence inside the div.
+    </p>
+  </div>
+  <br>
+  <br>
+  <h4>Click me then the inner element to see an anonymous function then an arrow function in action</h4>
+  <script>
+
+    let anonFunctionTest = document.querySelector("h4");
+
+    let returnGreen = () => inner.style.color = "green";
+
+    inner.addEventListener("click", returnGreen);
+
+    let changeText = () => {
+    inner.addEventListener("click", function()
+    {inner.textContent = "I'm changing because an arrow function is being triggered"})
+    }
+
+    anonFunctionTest.addEventListener("click", changeText)
+  </script>
+</body>
+</html>

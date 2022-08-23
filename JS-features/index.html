@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+
+    function enterNumber(){
+
+      let x = document.getElementById("number").value;
+
+      try {
+
+        if (typeof(parseInt(x)) == NaN){
+          throw "Invalid input. Try again"
+        } else {
+          console.log(x + " is a great choice!");
+          document.getElementById("message").innerText = x + "! What a great number!";
+        }
+
+      } catch(err) {
+
+          console.log(err);
+
+      }
+  }
+
+  </script>
+
+</head>
+
+<body>
+
+  <form action="http://127.0.0.1:5500/index.html" method="GET">
+    <!-- Below will let you see the result of the event handler being called better because it pauses before going to another page -->
+  <!-- <form action="http://127.0.0.1:5500/event-response.html" method="GET"> -->
+    <label>
+      Enter your favorite number:
+    </label>
+    <input type="text" name="number" id="number">
+    <input type="submit" onclick="enterNumber()">
+  </form>
+
+  <br><br>
+
+  <p id="message"></p>
+
+</body>
+
+</html>
