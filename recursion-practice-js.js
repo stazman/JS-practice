@@ -1,18 +1,43 @@
 
 
+function expo (base, exp){
+
+//base case --
+
+if(exp<1){
+  return 1;
+}
+let recurNum = expo(base, exp-1);
+
+return recurNum * base;
+
+
+//base * base each time exp is reduced by one
+
+//result is called power technically
+
+//base times itself exp number of times
+
+}
+
+console.log(expo(8,4))
+
+
+
+
 
 
 // https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-4.php
 
-function addNums(arr){
-  if(arr.length===1){
-    return arr[0]
-  } else {
-    return arr.pop() + addNums(arr)
-  }
-}
+// function addNums(arr){
+//   if(arr.length===1){
+//     return arr[0]
+//   } else {
+//     return arr.pop() + addNums(arr)
+//   }
+// }
 
-console.log(addNums([4,8,22,10,6]))
+// console.log(addNums([4,8,22,10,6]))
 
 //Explanation:
 // Each time function is called ->
