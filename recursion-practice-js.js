@@ -1,15 +1,19 @@
 
 
-function expo (base, exp){
 
-//base case --
 
-if(exp<1){
-  return 1;
-}
-let recurNum = expo(base, exp-1);
 
-return recurNum * base;
+
+// function expo (base, exp){
+
+// //base case --
+
+// if(exp<1){
+//   return 1;
+// }
+// let recurNum = expo(base, exp-1);
+
+// return recurNum * base;
 
 
 //base * base each time exp is reduced by one
@@ -18,13 +22,9 @@ return recurNum * base;
 
 //base times itself exp number of times
 
-}
+// }
 
-console.log(expo(8,4))
-
-
-
-
+// console.log(expo(8,4))
 
 
 // https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-4.php
@@ -92,3 +92,32 @@ console.log(expo(8,4))
 // the value of n is being changed with each call and arr stays the same
 //     }
 //   }
+
+// 4. Write a JavaScript program to compute the sum of an array of integers. Go to the editor
+// Example : var array = [1, 2, 3, 4, 5, 6]
+// Expected Output : 21
+// Click me to see the solution.
+
+
+// const arr = new Array(1, 2, 3, 4, 5, 6)
+
+
+// function sum(arr, i){
+
+//   // let l = arr
+//   // n = l.length
+
+//   arr.pop()
+
+//   if(arr.length === 0){
+//     return [] ;
+//   }
+
+//   let sumRecur = sum(arr, i-1)
+//   sumRecur.push(arr[i-1])
+
+
+
+// }
+
+// sum([1, 2, 3, 4, 5, 6], 6)
