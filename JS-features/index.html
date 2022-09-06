@@ -5,7 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script>
+	<style>
+    div.first-div::after {
+      display: block;
+      /* Because ::after and ::before are default inline, you have to declare display: block explicitly for it to be block */
+      border: 8px solid;
+      padding: 8px 8px 8px 8px;
+      margin: 8px;
+      content: "Hello there";
+    }
+  </style>
+  <script>
 
     function enterNumber(){
 
@@ -32,7 +42,12 @@
 </head>
 
 <body>
-
+  <div class="first-div">
+    <p></p>
+  </div>
+  <main>
+    
+  </main>
   <form action="http://127.0.0.1:5500/index.html" method="GET">
     <!-- Below will let you see the result of the event handler being called better because it pauses before going to another page -->
   <!-- <form action="http://127.0.0.1:5500/event-response.html" method="GET"> -->

@@ -1,24 +1,91 @@
 
+function checkPalindrome(string){
 
-function fib(n){
+let str = string;
+
+let strIndex = 0;
+
+let endCounter = -1;
+
+  // newObj[counter] = string[strIndex];
 
 
-  if (n===2){
-    return [0,1];
-  } else if (n===1){
-    return [0];
-  } else if (n<=0){
-    return 0;
+  // counter++;
+
+
+  if (str.charAt(strIndex) !== str.charAt(endCounter)){
+    return new Boolean;
   }
 
-  let recurFib = fib(n-1);
+  console.log(str)
+  console.log(str[0])
+  console.log(str[strIndex])
 
-  recurFib.push(recurFib[recurFib.length-2] + recurFib[recurFib.length-1]);
 
-  return recurFib;
+  let recurPalFor = checkPalindrome(str[strIndex]);
+
+  
+
+
+  let recurPalEnd = checkPalindrome(str[endCounter]);
+
+
+  let result = recurPalFor === recurPalEnd;// if (recurPal !== checkPalindrome()
+
+
+  return result;
+  // if(counter<=(string.length/2)){
+  //   return 0;
+  // }
+
+  // let recurPal = checkPalindrome(string[string.length-1]);
+
+  // recurPal === checkPalindrome(string[0])
+
+
+  // recurPal
+
+  // arr.shift().pop();
+
+
+  // console.log(recurPal)
+
+
+  // return
+
+  // string[0]!==recurPal[string[string.length]]
+
+  // console.log(newObj)
 }
 
-fib(4)
+checkPalindrome('racecar')
+
+
+  //if popped off string from first call matches popped off string from second call will result in a boolean
+
+  //compare the current first index with current last index
+  //if what's popped off matches what's popped off
+
+
+// function fib(n){
+
+
+//   if (n===2){
+//     return [0,1];
+//   } else if (n===1){
+//     return [0];
+//   } else if (n<=0){
+//     return 0;
+//   }
+
+//   let recurFib = fib(n-1);
+
+//   recurFib.push(recurFib[recurFib.length-2] + recurFib[recurFib.length-1]);
+
+//   return recurFib;
+// }
+
+// fib(4)
 
 
 
