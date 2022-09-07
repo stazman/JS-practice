@@ -1,66 +1,23 @@
 
-function checkPalindrome(string){
-
-let str = string;
-
-let strIndex = 0;
-
-let endCounter = -1;
-
-  // newObj[counter] = string[strIndex];
 
 
-  // counter++;
+//remember, slice doesn't mutate the string, which is not possible, but it does return copies that are stored as changed within the series of recursive calls. remember, slice() returns what's left in a shallow copy, not what's removed.
 
+//used from https://stackoverflow.com/questions/51567811/recursive-palindrome-check-with-javascript
 
-  if (str.charAt(strIndex) !== str.charAt(endCounter)){
-    return new Boolean;
-  }
+function checkPalindrome(str){
 
-  console.log(str)
-  console.log(str[0])
-  console.log(str[strIndex])
-
-
-  let recurPalFor = checkPalindrome(str[strIndex]);
-
-  
-
-
-  let recurPalEnd = checkPalindrome(str[endCounter]);
-
-
-  let result = recurPalFor === recurPalEnd;// if (recurPal !== checkPalindrome()
-
-
-  return result;
-  // if(counter<=(string.length/2)){
-  //   return 0;
-  // }
-
-  // let recurPal = checkPalindrome(string[string.length-1]);
-
-  // recurPal === checkPalindrome(string[0])
-
-
-  // recurPal
-
-  // arr.shift().pop();
-
-
-  // console.log(recurPal)
-
-
-  // return
-
-  // string[0]!==recurPal[string[string.length]]
-
-  // console.log(newObj)
+  if (str.length===1) return true;
+  if (str.length===2) return str[0]===str[1];
+  if (str[0]===str.slice(-1)) return checkPalindrome(str.slice(1,-1));
+  return false;
 }
 
-checkPalindrome('racecar')
+console.log(checkPalindrome('hat'))
 
 
+
+  //for fib():
   //if popped off string from first call matches popped off string from second call will result in a boolean
 
   //compare the current first index with current last index
